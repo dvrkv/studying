@@ -1,12 +1,12 @@
-package ru.sberbank.bigdata.cloud.arkp.etl.openflow.dm.xssr.wf
+package ru.brbnk.bigdata.cloud.arkp.etl.openflow.dm.xssr.wf
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
-import ru.sberbank.bigdata.cloud.arkp.etl.meta.valueobjects.CtlStat.{CHANGE, LAST_LOADED_TIME, MAX_PROCESSED_DATE}
-import ru.sberbank.bigdata.cloud.arkp.etl.openflow.OpenFlow
-import ru.sberbank.bigdata.cloud.arkp.etl.openflow.ops.PropOps._
-import ru.sberbank.bigdata.cloud.arkp.etl.openflow.ops.SqlSplitter.RunSQLScripting.{runSQLCompositeScript, p, runningFileName}
-import ru.sberbank.bigdata.cloud.arkp.etl.util.Util.getCurrentDateTime
+import ru.brbnk.bigdata.cloud.arkp.etl.meta.valueobjects.CtlStat.{CHANGE, LAST_LOADED_TIME, MAX_PROCESSED_DATE}
+import ru.brbnk.bigdata.cloud.arkp.etl.openflow.OpenFlow
+import ru.brbnk.bigdata.cloud.arkp.etl.openflow.ops.PropOps._
+import ru.brbnk.bigdata.cloud.arkp.etl.openflow.ops.SqlSplitter.RunSQLScripting.{runSQLCompositeScript, p, runningFileName}
+import ru.brbnk.bigdata.cloud.arkp.etl.util.Util.getCurrentDateTime
 
 object DataExtractor extends App {
   val f: OpenFlow = OpenFlow(this.getClass.getName)
